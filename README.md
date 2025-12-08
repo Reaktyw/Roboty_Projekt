@@ -1,10 +1,10 @@
 # Robot Interface (ROS2)
 
-Paczka do sterowania robotem za pomocą ArUco.
+Paczka do sterowania robotem za pomocą ArUco.  
 Całość uruchamiana za pomocą launch.
 
 ## Instalacja
-colcon build
+colcon build  
 source install/setup.bash
 
 ## Uruchomienie
