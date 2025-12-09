@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+		'camera_publisher = robot_interface.camera_publisher:main',
+		'image_viewer = robot_interface.image_viewer:main',
         ],
     },
 )
