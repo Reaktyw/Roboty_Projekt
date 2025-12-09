@@ -26,6 +26,7 @@ setup(
         'console_scripts': [
 		'camera_publisher = robot_interface.camera_publisher:main',
 		'image_viewer = robot_interface.image_viewer:main',
+		'aruco_detector = robot_interface.aruco_detector:main',
         ],
     },
 )
