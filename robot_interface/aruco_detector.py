@@ -33,7 +33,7 @@ class ArucoDetector(Node):
         status.data = "none"
 
         if ids is not None and ids.size > 0:
-            ids_flat = ids.flatten()  # np.array z shape (N,) dla łatwego porównania
+            ids_flat = ids.flatten()
             matches = np.where(ids_flat == self.target_id)[0]
             if matches.size > 0:
                 idx = int(matches[0])          # indeks wykrytego docelowego markera

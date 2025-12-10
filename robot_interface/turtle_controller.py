@@ -9,7 +9,7 @@ class TurtleController(Node):
         super().__init__('turtle_controller')
         self.sub = self.create_subscription(String, '/aruco/pos', self.aruco_cb, 10)
         self.pub = self.create_publisher(Twist, '/cmd_vel', 10)
-        self.forward_speed = 0.15
+        self.forward_speed = 0.30
         self.moving = False
 
     def aruco_cb(self, msg):
