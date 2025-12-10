@@ -10,8 +10,8 @@ class CameraPublisher(Node):
         self.publisher_ = self.create_publisher(Image, '/camera/image_raw', 10)
         self.cap = cv2.VideoCapture(0)
 
-        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)  # szerokość
-        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)  # wysokość
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
         if not self.cap.isOpened():
             self.get_logger().error('Nie można otworzyć kamery (0). Sprawdź podłączenie.')

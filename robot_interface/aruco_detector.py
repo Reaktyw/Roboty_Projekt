@@ -18,8 +18,7 @@ class ArucoDetector(Node):
         self.aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_6X6_250)
         self.parameters = cv2.aruco.DetectorParameters()
 
-        # Ustaw tutaj ID markera, którego faktycznie używacie:
-        self.target_id = 42  # <- zmień na swój kod ArUco
+        self.target_id = 42
 
     def image_cb(self, msg):
         img = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
