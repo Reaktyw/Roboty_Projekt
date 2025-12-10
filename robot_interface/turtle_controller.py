@@ -16,13 +16,18 @@ class TurtleController(Node):
         status = msg.data
         twist = Twist()
         if status == "above":
-            twist.linear.x = self.forward_speed
+            twist.linear.x = self.forward_speed        # przód
             self.moving = True
-        else:
-            twist.linear.x = 0.0
-            self.moving = False
-        self.pub.publish(twist)
 
+        elif status == "below":
+            twist.linear.x = -self.forward_speed       # tył
+            self.moving = True
+
+        else:
+            twist.linear.x = 0.0                       # stop
+            self.moving = False
+
+        self.pub.publish(twist)
 def main(args=None):
     rclpy.init(args=args)
     node = TurtleController()
