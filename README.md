@@ -8,4 +8,4 @@ colcon build
 source install/setup.bash
 
 ## Uruchomienie
-ros2 launch robot_interface control.launch.py (nazwa może do zmiany)
+ros2 launch robot_interface control.launch.py (nazwa do zmiany)
